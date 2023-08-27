@@ -13,6 +13,13 @@ $mysqli = new mysqli(MYSQL_HOST,MYSQL_USER,MYSQL_PASS,MYSQL_DB);
 
 <body>
 <?php include("header.html"); ?>
+
+	<a href="hocphi.php?type=UDCNTT">Chứng chỉ UDCNTT</a> |
+	<a href="hocphi.php?type=TXQM">Xét tuyển DTTX</a> |
+	<a href="hocphi.php?type=CN1">Hệ Cử nhân 1</a> |
+	<a href="hocphi.php?type=CN2">Hệ Cử nhân 2</a> |
+	<a href="hocphi.php?type=HC">Hệ Liên thông</a>
+
 <?php
 	if (isset($_GET['student_code'])) {
 		$sql = "SELECT * FROM hocphi WHERE bank_note LIKE '%".$_GET['student_code']."%'";
@@ -116,6 +123,40 @@ $mysqli = new mysqli(MYSQL_HOST,MYSQL_USER,MYSQL_PASS,MYSQL_DB);
 			}
 		}
 	}
+	} elseif (isset($_GET['type'])) {
+		$sql = "SELECT YEAR(date) AS year, date, bank_note, amount FROM hocphi WHERE bank_note LIKE '%".$_GET['type']."%'";
+		if ($result = $mysqli->query($sql)) {
+		  while ($obj = $result->fetch_array(MYSQLI_ASSOC)) {
+			$data[] = $obj;
+		  }
+		  $result -> free_result();
+		}		
+
+//		echo "<pre>";print_r($data);
+
+?>
+
+
+	
+	<table cellspacing="0" cellpadding="5" border="1">
+		<thead>
+			<td>Năm</td>
+			<td>Ngày</td>
+			<td>Thông tin chuyển khoản</td>
+			<td>Số tiền</td>
+		</thead>
+		<tbody>
+<?php
+		for ($i=0;$i<count($data);$i++) {
+?>
+		<tr>
+			<td><?=$data[$i]['year'];?></td>
+			<td><?=$data[$i]['date'];?></td>
+			<td><?=$data[$i]['bank_note'];?></td>
+			<td><?=$data[$i]['amount'];?></td>
+		</tr>
+<?php
+		}
 	}
 
 ?>
@@ -123,8 +164,6 @@ $mysqli = new mysqli(MYSQL_HOST,MYSQL_USER,MYSQL_PASS,MYSQL_DB);
 		</tbody>
 	</table>
 
-<a href="hocphi.php?type=UDCNTT">Chứng chỉ UDCNTT</a>
-<a href="hocphi.php?type=TXQM">Xét tuyển DTTX</a>
 
 
 </body>
