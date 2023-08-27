@@ -1,8 +1,8 @@
 <?php
 	
-	define("MYSQL_USER", "root");
-	define("MYSQL_PASS", "");
+	define("MYSQL_USER", "kushineyeudau");
+	define("MYSQL_PASS", "Aa123456@");
 	define("MYSQL_HOST", "localhost");
-	define("MYSQL_DB", "quanlylichhoc");
+	define("MYSQL_DB", "kushineyeudau");
 
 
