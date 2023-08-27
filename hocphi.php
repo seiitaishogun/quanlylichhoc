@@ -18,7 +18,7 @@ $mysqli = new mysqli(MYSQL_HOST,MYSQL_USER,MYSQL_PASS,MYSQL_DB);
 	<a href="hocphi.php?type=TXQM">Xét tuyển DTTX</a> |
 	<a href="hocphi.php?type=CN1">Hệ Cử nhân 1</a> |
 	<a href="hocphi.php?type=CN2">Hệ Cử nhân 2</a> |
-	<a href="hocphi.php?type=HC">Hệ Liên thông</a>
+	<a href="hocphi.php?type=HC.">Hệ Liên thông</a>
 
 <?php
 	if (isset($_GET['student_code'])) {
