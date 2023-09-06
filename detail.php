@@ -1,4 +1,6 @@
 <?php
+
+require_once("auth.php");
 include 'connect.php';
 $class = $_GET['class'];
 $sqlSchedule = "SELECT * FROM lichhoc WHERE class LIKE '%" . implode(" + ", explode(' , ', $class)) . "%'";
@@ -20,7 +22,7 @@ $resultStudent = mysqli_query($connect, $sqlStudent);
 </head>
 
 <body>
-<?php include("header.html"); ?>
+<?php include("header.php"); ?>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <li class="nav-item">

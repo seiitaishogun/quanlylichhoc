@@ -1,4 +1,6 @@
 <?php
+require_once("auth.php");
+
 include 'connect.php';
 $sql = "SELECT distinct(class) FROM sinhvien";
 $result = mysqli_query($connect, $sql);
@@ -17,7 +19,7 @@ $result = mysqli_query($connect, $sql);
 </head>
 
 <body>
-<?php include("header.html"); ?>
+<?php include("header.php"); ?>
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <li class="nav-item">

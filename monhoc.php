@@ -1,5 +1,6 @@
 <?php
 
+require_once("auth.php");
 require_once("constant.php");
 
 $mysqli = new mysqli(MYSQL_HOST,MYSQL_USER,MYSQL_PASS,MYSQL_DB);
@@ -22,7 +23,7 @@ $mysqli -> close();
 </head>
 
 <body>
-<?php include("header.html"); ?>
+<?php include("header.php"); ?>
 	<table cellspacing="0" cellpadding="5" border="1">
 		<thead>
 			<td>Môn</td>
