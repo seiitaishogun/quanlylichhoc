@@ -2,9 +2,19 @@
 
 require_once("auth.php");
 include 'connect.php';
+
+$sql = "SELECT DISTINCT(code), name FROM lichhoc";
+$result = mysqli_query($connect, $sql);
+while ($row = $result->fetch_array(MYSQLI_ASSOC)):
+    for ($i=0; $i<count($row); $i++) {
+        $mon[$row['code']] = $row['name'];
+    }
+endwhile;
+$result->free_result();
+
 $class = $_GET['class'];
 $sqlStudent = "SELECT * FROM sinhvien AS A 
-    LEFT JOIN diem AS B ON (A.student_code=B.student_code)
+    LEFT JOIN diem AS B ON (A.student_code=B.student_code) 
     WHERE A.class = '" . $class . "'";
 $resultStudent = mysqli_query($connect, $sqlStudent);
 ?>
@@ -49,7 +59,7 @@ $resultStudent = mysqli_query($connect, $sqlStudent);
                     <?php
                     for ($i=5; $i<count($key); $i++) {
                     ?>
-                    <th><?=$key[$i]; ?></th>
+                    <th><?=$mon[$key[$i]] ?? $key[$i]; ?></th>
                     <?php
                     }
                     ?>
