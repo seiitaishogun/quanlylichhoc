@@ -24,7 +24,7 @@ $resultStudent = mysqli_query($connect, $sqlStudent);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh sách sinh viên</title>
+    <title>Quản lý sinh viên</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -36,12 +36,12 @@ $resultStudent = mysqli_query($connect, $sqlStudent);
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="index.php">Danh sách lớp học</a>
+                <a class="nav-link" href="index.php">Điểm</a>
             </li>
         </ul>
     </nav>
     <div class="container">
-        <h2 class="text-center mt-3 mb-3">Danh sách sinh viên</h2>
+        <h2 class="text-center mt-3 mb-3">Điểm</h2>
         <table class="table table-bordered">
                 <?php if (mysqli_num_rows($resultStudent) > 0): ?>
                     <?php
