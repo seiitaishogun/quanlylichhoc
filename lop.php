@@ -44,6 +44,7 @@ $result = mysqli_query($connect, $sql);
                             <td>
                                 <a class="btn btn-primary" href="detail.php?class=<?= str_replace(' + ', ' , ', $row['class']) ?>">Lịch học + Sinh viên</a>
                                 <a class="btn btn-primary" href="hocphi.php?class=<?=$row['class'];?>">Học phí</a>
+                                <a class="btn btn-primary" href="diem.php?class=<?=$row['class'];?>">Điểm</a>
                             </td>
                         </tr>
                     <?php endwhile; ?>

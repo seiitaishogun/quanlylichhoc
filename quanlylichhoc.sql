@@ -11,11 +11,83 @@
  Target Server Version : 100428
  File Encoding         : 65001
 
- Date: 27/08/2023 21:11:50
+ Date: 17/09/2023 22:02:39
 */
 
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+-- Table structure for diem
+-- ----------------------------
+DROP TABLE IF EXISTS `diem`;
+CREATE TABLE `diem`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `student_code` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IT001` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IT004` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IE005` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IT005` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IE103` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IT002` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IT003` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IE104` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `MA004` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IE105` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IS208` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IS336` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IE203` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IE202` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  `IE405` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 44 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of diem
+-- ----------------------------
+INSERT INTO `diem` VALUES (1, '21410022', '7.5', '8', NULL, '7.5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `diem` VALUES (2, '21410023', '8.5', '8', NULL, '9', NULL, '7.5', '6', '5', '10', '8.5', '9.5', '9.5', '8.6', '9', '7.5');
+INSERT INTO `diem` VALUES (3, '21410024', '8.5', '7.5', NULL, '7.5', NULL, '7.5', '8.5', '7', '8.5', '8', '7.5', '9', '8.1', '8.5', '8');
+INSERT INTO `diem` VALUES (4, '21410025', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `diem` VALUES (5, '21410026', '9', '8', NULL, '8', NULL, '6', '7.5', '7', '9', '8.5', '7', '9', '7.4', '8.5', '8');
+INSERT INTO `diem` VALUES (6, '21410027', '8.5', '7.5', NULL, '7', NULL, '7.5', '5', '5.5', '8', '7.5', '9', '9.5', '8.1', '9', '7.5');
+INSERT INTO `diem` VALUES (7, '21410028', '8.5', '7.5', NULL, '9.5', NULL, '6', '6.5', '6.5', '8', '9', '9', '9.5', '7.1', '9', '7.5');
+INSERT INTO `diem` VALUES (8, '21410029', '7.5', '5.5', NULL, '7', NULL, '6.5', '7', '8', '6.5', '7', '7.5', '8.5', '4.9', '9', '3.5');
+INSERT INTO `diem` VALUES (9, '21410030', '8.5', '6', NULL, '7', NULL, '6.5', '5', '8', '6', '7.5', '5', '7', '6.3', '8', '3.5');
+INSERT INTO `diem` VALUES (10, '21410031', '8.5', '8.5', NULL, '7.5', NULL, '7.5', '5.5', '8.5', '9', '8', '8', '9', '8.7', '7.5', '8');
+INSERT INTO `diem` VALUES (11, '21410032', '8', '6', NULL, '7.5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2.4', NULL, '8');
+INSERT INTO `diem` VALUES (12, '21410033', '8.5', '8', NULL, '8.5', NULL, '6.5', '5.5', '5', '9.5', '8', '9', '10', '8.7', '7.5', '9');
+INSERT INTO `diem` VALUES (13, '21410034', '8', '8.5', NULL, '8', NULL, '7', '5.5', '8.5', '7.5', '7.5', '8.5', '9', '8.4', '8', '7');
+INSERT INTO `diem` VALUES (14, '21410035', '8.5', '5.5', NULL, '7', NULL, '7.5', '5.5', '6', '5.5', '8', '8.5', '9', '8.7', '7.5', '4');
+INSERT INTO `diem` VALUES (15, '21410036', '7.5', '8.5', NULL, '8', NULL, '7', '5.5', '6.5', '8.5', '7', '9', '10', '8.9', '8', '4.5');
+INSERT INTO `diem` VALUES (16, '21410037', '8.5', '7.5', NULL, '7.5', NULL, '7.5', '7', '5', '6', '8', '8', '8', '8.5', '9.5', '8.5');
+INSERT INTO `diem` VALUES (17, '21410038', '9', '7', NULL, '7.5', NULL, '7', '8', '8.5', '9.5', '8.5', '8', '9', '8', '8.5', '7');
+INSERT INTO `diem` VALUES (18, '21410039', '8.5', '6.5', NULL, '7.5', NULL, '7', '6.5', '3', '6.5', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `diem` VALUES (19, '21410040', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `diem` VALUES (20, '21410041', '9', '8.5', NULL, '9.5', NULL, '6.5', '9', '9', '7.5', '9', '8', '9', '6.8', '8.5', '9.5');
+INSERT INTO `diem` VALUES (21, '21410042', '6.5', '8.5', NULL, '7', NULL, '7', '7.5', '6.5', '6', '7', '8', '8', '6', '8.5', '3.5');
+INSERT INTO `diem` VALUES (22, '21410043', '8.5', '4.5', NULL, '7', NULL, '7', '7', '6', '6', '6', '5', '7', '6.3', '9', '3.5');
+INSERT INTO `diem` VALUES (23, '21410044', '8.5', '7', NULL, '7', NULL, '7.5', '5.5', '6.5', '6.5', '7', '8', '9.5', '6.3', '9', '7');
+INSERT INTO `diem` VALUES (24, '21410045', '8', '7', NULL, '8', NULL, '7.5', '8', '7', '6.5', '8', '9.5', '9.5', '7.8', '9', '7.5');
+INSERT INTO `diem` VALUES (25, '21410046', '8.5', '7', NULL, '7', NULL, '6.5', '6', '5', '6.5', '8', '5.5', '7', '6', '6', '4');
+INSERT INTO `diem` VALUES (26, '21410047', '7.5', '7', NULL, '7', NULL, '6.5', '8', '7', '7.5', '7.5', '8', '8', '3.5', '8', '3.5');
+INSERT INTO `diem` VALUES (27, '21410048', '8.5', '5', NULL, '7', NULL, '7.5', '6', '6.5', '8.5', '8', '9', '9.5', '8.4', '7.5', '8.5');
+INSERT INTO `diem` VALUES (28, '21410049', '9.5', '8.5', NULL, '8', NULL, '7.5', '7.5', '8.5', '9', '8.5', '8', '9.5', '8.2', '9', '8');
+INSERT INTO `diem` VALUES (29, '21410050', '9', '8.5', NULL, '7', NULL, '7.5', '6.5', '7', '7', '8.5', '9', '10', '7.2', '8.5', '9');
+INSERT INTO `diem` VALUES (30, '21410051', '8', '8', NULL, '9', NULL, '7.5', '7', '6.5', '9', '8.5', '9', '9.5', '9.4', '9', '9');
+INSERT INTO `diem` VALUES (31, '21410052', '8.5', '8', NULL, '8.5', NULL, '7.5', '6.5', '6.5', '7', '8.5', '7.5', '9', '8.4', '8.5', '7.5');
+INSERT INTO `diem` VALUES (32, '21410053', '8', '7', NULL, '8', NULL, '7', '6.5', '8', '9.5', '9', '9', '9.5', '7.5', '9', '8.5');
+INSERT INTO `diem` VALUES (33, '21410054', '6.5', '8.5', NULL, '7.5', NULL, '6', '6', '7.5', '5.5', '7', '7', '7', '4.2', '7', '3');
+INSERT INTO `diem` VALUES (34, '21410055', '8.5', '6', NULL, '7', NULL, NULL, '7', '5', '6', NULL, NULL, NULL, '0', NULL, '0');
+INSERT INTO `diem` VALUES (35, '21410056', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '3.5');
+INSERT INTO `diem` VALUES (36, '21410057', '7.5', '7.5', NULL, '7', NULL, '6.5', '7.5', '7', '7', '8', '7', '8.5', '7.7', '9', NULL);
+INSERT INTO `diem` VALUES (37, '21410058', '8.5', '6.5', NULL, '7', NULL, '5.5', '6.5', '5', '6', '8', '8', '8', '4.6', '8', '7');
+INSERT INTO `diem` VALUES (38, '21410060', '8.5', '7', NULL, '7.5', NULL, '7', '7.5', '6.5', '6', '7', '7.5', '8', '5.6', '9', '3.5');
+INSERT INTO `diem` VALUES (39, '21410061', '8.5', '7', NULL, '5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `diem` VALUES (40, '21410063', '7.5', '6.5', NULL, '7.5', NULL, '6.5', '8.5', '7', '8.5', '7.5', '8', '9.5', '4.6', '8.5', '7');
+INSERT INTO `diem` VALUES (41, '21410064', '9', '7', NULL, '5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `diem` VALUES (42, '21410066', '8.5', '6.5', NULL, '5', NULL, '7.5', '8', '7.5', '6', '9', '8', '9.5', '9', '9', '9');
+INSERT INTO `diem` VALUES (43, '21410068', '8.5', '7.5', NULL, '6.5', NULL, '7', '7.5', '7.5', '7.5', '7', '7.5', '8', '5.3', '8', '3.5');
 
 -- ----------------------------
 -- Table structure for hocphi
@@ -1615,13 +1687,13 @@ INSERT INTO `lichhoc` VALUES (36, 'IE207', 'Đồ án', '2', ' ', 'CN1.K2020', '
 -- ----------------------------
 DROP TABLE IF EXISTS `sinhvien`;
 CREATE TABLE `sinhvien`  (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `class` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `student_code` int NULL DEFAULT NULL,
   `last_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   `first_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB AUTO_INCREMENT = 62 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sinhvien
@@ -1685,5 +1757,24 @@ INSERT INTO `sinhvien` VALUES (56, 'HC.K2021.1', 21410018, 'Phạm Trung ', 'Tí
 INSERT INTO `sinhvien` VALUES (57, 'HC.K2021.1', 21410019, 'Nguyễn Tô Thế ', 'Toàn');
 INSERT INTO `sinhvien` VALUES (58, 'HC.K2021.1', 21410020, 'Đinh Thị Thùy ', 'Vân');
 INSERT INTO `sinhvien` VALUES (59, 'HC.K2021.1', 21410021, 'Dương Hoàng ', 'Vũ');
+INSERT INTO `sinhvien` VALUES (60, 'HC.K2021.2', 21410022, 'Nguyễn Đức \r\n', 'Ấn\r\n');
+INSERT INTO `sinhvien` VALUES (61, 'HC.K2021.2', 21410023, 'Lê Trường \r\n', 'Anh\r\n');
+
+-- ----------------------------
+-- Table structure for users
+-- ----------------------------
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE `users`  (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of users
+-- ----------------------------
+INSERT INTO `users` VALUES (1, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+INSERT INTO `users` VALUES (2, 'hocphi', '47652da926fc6f321e34f98aae42975f');
 
 SET FOREIGN_KEY_CHECKS = 1;
