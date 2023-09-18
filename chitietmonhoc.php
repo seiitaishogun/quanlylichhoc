@@ -11,10 +11,10 @@ if ($result = $mysqli->query($sql)) {
   while ($obj = $result->fetch_array(MYSQLI_ASSOC)) {
 	$data[] = $obj;
   }
-  $result -> free_result();
+  $result->free_result();
 }
 
-$mysqli -> close();
+$mysqli->close();
 ?>
 
 <html>

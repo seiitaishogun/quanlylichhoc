@@ -2,7 +2,7 @@
 
 require_once("constant.php");
 
-if ($_POST) {
+if (@$_POST['username']) {
     $mysqli = new mysqli(MYSQL_HOST,MYSQL_USER,MYSQL_PASS,MYSQL_DB);
 
     $sql = "SELECT * FROM users WHERE username='" . $_POST['username'] . "' && password='" . md5($_POST['password']) . "' LIMIT 1";
