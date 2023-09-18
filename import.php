@@ -99,14 +99,6 @@ $mysqli->close();
     <input type="submit" value="Import">
 </form>
 
-	<table cellspacing="0" cellpadding="5" border="1">
-		<thead>
-			<td>Môn</td>
-		</thead>
-		<tbody>
-
-		</tbody>
-	</table>
 </body>
 
 </html>
