@@ -42,6 +42,8 @@ if (isset($_POST)) {
                         $date = date("Y-m-d", strtotime($sheetData[$i][$j]));
 //                        $date2 = date_format($date,"Y-m-d");
                         $value[] = "'" . $date . "'" ?? 0;
+                    } elseif ($sheetData[0][$j]=='amount') {
+                        $value[] = "'" . (float) $sheetData[$i][$j] . "'" ?? 0;
                     } else {
                         $value[] = "'" . $sheetData[$i][$j] . "'" ?? 0;
                     }
