@@ -39,7 +39,9 @@ if (isset($_POST)) {
             for ($i=1; $i<count($sheetData); $i++) {
                 for ($j=0; $j<count($sheetData[$i]); $j++) {
                     if ($sheetData[0][$j]=='date') {
-                        $value[] = "DATE_FORMAT(\"" . $sheetData[$i][$j] . "\", \"%Y-%m-%d\")" ?? 0;
+                        $date = date("Y-m-d", strtotime($sheetData[$i][$j]));
+//                        $date2 = date_format($date,"Y-m-d");
+                        $value[] = "'" . $date . "'" ?? 0;
                     } else {
                         $value[] = "'" . $sheetData[$i][$j] . "'" ?? 0;
                     }
