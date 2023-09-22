@@ -38,7 +38,11 @@ if (isset($_POST)) {
 
             for ($i=1; $i<count($sheetData); $i++) {
                 for ($j=0; $j<count($sheetData[$i]); $j++) {
-                    $value[] = "'" . $sheetData[$i][$j] . "'" ?? 0;
+                    if ($sheetData[0][$j]=='date') {
+                        $value[] = "DATE_FORMAT('" . $sheetData[$i][$j] . "')" ?? 0;
+                    } else {
+                        $value[] = "'" . $sheetData[$i][$j] . "'" ?? 0;
+                    }
                 }
                 $value2[] = '(' . implode(", ", $value) . ')';
                 unset($value);
