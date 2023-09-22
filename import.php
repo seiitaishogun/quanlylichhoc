@@ -43,7 +43,7 @@ if (isset($_POST)) {
 //                        $date2 = date_format($date,"Y-m-d");
                         $value[] = "'" . $date . "'" ?? 0;
                     } elseif ($sheetData[0][$j]=='amount') {
-                        $value[] = "'" . str_replace(",","", $sheetData[$i][$j]) . "'" ?? 0;
+                        $value[] = "'" . (int) str_replace(",","", $sheetData[$i][$j]) . "'" ?? 0;
                     } else {
                         $value[] = "'" . $sheetData[$i][$j] . "'" ?? 0;
                     }
