@@ -39,7 +39,7 @@ if (isset($_POST)) {
             for ($i=1; $i<count($sheetData); $i++) {
                 for ($j=0; $j<count($sheetData[$i]); $j++) {
                     if ($sheetData[0][$j]=='date') {
-                        $value[] = "DATE_FORMAT('" . $sheetData[$i][$j] . "')" ?? 0;
+                        $value[] = "DATE_FORMAT('" . $sheetData[$i][$j] . "', '%Y-%m-%d')" ?? 0;
                     } else {
                         $value[] = "'" . $sheetData[$i][$j] . "'" ?? 0;
                     }
