@@ -45,7 +45,7 @@ if (isset($_POST)) {
             }
             $value2 = implode(", ", $value2);
 
-//            echo "<pre>"; print_r($value2);
+//            echo "<pre>"; print_r($value2);exit();
 
 
             $sql = "INSERT INTO " . $_POST['type'] . $key . " VALUES " . $value2;
