@@ -39,7 +39,8 @@ if (isset($_POST)) {
             for ($i=1; $i<count($sheetData); $i++) {
                 for ($j=0; $j<count($sheetData[$i]); $j++) {
                     if ($sheetData[0][$j]=='date') {
-                        $date = date("Y-m-d", strtotime($sheetData[$i][$j]));
+                        $date = date_format(date_create_from_format('j/n/Y', $sheetData[$i][$j]), 'Y-m-d');
+//                        $date = date("Y-m-d", strtotime($sheetData[$i][$j]));
 //                        $date2 = date_format($date,"Y-m-d");
                         $value[] = "'" . $date . "'" ?? 0;
                     } elseif ($sheetData[0][$j]=='amount') {
